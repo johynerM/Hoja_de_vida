@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Hoja de vida</title>
 </head>
 <body>
-    
+    <main class="portafolio">
+        <section class="perfil" id="perfil">
+            <header class="perfil__header"> <h1 class="perfil__title">Johyner Martinez </h1></header>
+            <p class="perfil__certificado"> Desarrollador Junior Full Stack </p>
+            <p class="perfil__pais">Santander-Colombia</p>
+            <div class="perfil__descripcion"> 
+                <p> Desarrollador Full Stack de 20 años con conocimientos especializados en desarrollo de paginas web y sistemas de automatización. Siempre dispuesto a aceptar nuevos retos y ejecutarlos con la mayor eficiencia posible.</p>
+            </div>
+        </section>
+        <section class="proyectos" id="proyectos">
+            <h2 class="proyectos__titulo-seccion"> Proyectos realizados</h2>
+            <div class="cajita-grid">
+                <article class="cajita-grid__tarjeta">
+                    <h3 class="cajita-grid__titulo"> LaCueva</h3>
+                    <p class="cajita-grid__descripcion"> Pagina web de un alquiler de consolas con diseño responsivo y estilo morderno </p>
+                </article>
+                <article class="cajita-grid__tarjeta">
+                    <h3 class="cajita-grid__titulo"> Organizador de horario </h3>
+                    <p class="cajita-grid__descripcion"> Horario que organiza la semana de un estudiante con sus datos para administrar su tiempo de una forma mucho más eficiente </p>
+                </article>
+                <article class="cajita-grid__tarjeta">
+                    <h3 class="cajita-grid__titulo"> Administracion ForceTech </h3>
+                    <p class="cajita-grid__descripcion"> Administrador del sistema de un gymnasio por medio de python </p>
+                </article>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <h2 class="skills__title"> Mis Habilidades</h2>
+            <div class="cajita-grid">
+                <article class="cajita-grid__tarjeta">
+                        <h3 class="cajita-grid__titulo"> Hard skills </h3>
+                        <p class="cajita-grid__descripcion"> Html5, CSS, Python, Github, PSeint </p>
+                    </article>
+                    <article class="cajita-grid__tarjeta">
+                        <h3 class="cajita-grid__titulo"> Soft skills </h3>
+                        <p class="cajita-grid__descripcion"> Resolucion de problemas, Logica, Negociante, Aprendizaje Agil</p>
+                    </article>
+            </div>
+        </section>
+        <section class="contactame" id="contactame">
+            <h2 class="contactame__title"> Contactos y Redes </h2>
+            <p class="contactame__descripcion"> ¿Te interesa lo que ves? Contactame por los siguientes medios y conversemos </p>
+            <form class="contactame__formulario">
+                <input type="text" class="contactame__input" placeholder="John Alejandro Marquez Londoño" required>
+                <input type="email" class="contactame__input" placeholder="Tucorreoelectronico@gmail.com" required>
+                <textarea class="contactame__textarea" placeholder="Escribe tu mensaje aqui" rows="5" required></textarea>
+                <button type="submit" class="contactame__boton">Enviar mensaje </button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
