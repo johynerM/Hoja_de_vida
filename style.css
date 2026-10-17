@@ -8,163 +8,193 @@
     --text-secondary: #a0959d;      /* Color del texto secundario */
     --font-main: system-ui, -apple-system, sans-serif;
 }
+/* R2 Pagina diseñada con la idea de MobileFirst*/
 body{
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-main);
     line-height: 1.6;
-    padding: 20px;
+    padding: 1rem;
+    margin: 0;
 }
-.portafolio{
-    max-width: 800px;
+img {
+    max-width: 100%;
+    height: auto;
+}
+.portafolio {
+    max-width: 62rem;
     margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "cabecera"
+        "menu"
+        "principal"
+        "pie";
+}
+.cabecera  { grid-area: encabezado; }
+.menu      { grid-area: menu; }
+.principal { grid-area: principal; }
+.pie       { grid-area: pie; }
+
+.principal {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 1.5rem;
 }
-.perfil, .proyectos, .skills ,.contactame{
-    position: sticky;
-    top: 20px;
-    background-color: var(--tarjeta-bg);
-    border: 1px solid var(--borde-tarjeta);
-    padding: 30px;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-.proyectos__titulo-seccion, .skills__title, .contactame__title{
-    color: var(--accent-gold);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--borde-tarjeta);
-}
-.perfil__title{
-    font-size: 2.4rem;
+/* Todos los detalles del encabezado */
+.encabezado__titulo {
+    font-size: 2rem;
+    margin: 0;
     color: var(--accent-gold);
 }
-.perfil__certificado{
+.encabezado__certificado {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-top: 5px;
+    margin: 0.3rem 0 0;
 }
-.perfil__pais{
+.encabezado__pais {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    margin-bottom: 15px;
+    margin: 0;
 }
-.perfil__descripcion{
+
+/* Estilizacion del R8  (el menu)*/
+
+.menu__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu__enlace {
+    display: block;
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
     color: var(--text-primary);
+    text-decoration: none;
     background-color: rgba(255, 255, 255, 0.08);
-    padding: 15px;
-    border-radius: 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu__enlace:hover,
+.menu__enlace:focus-visible,
+.menu__enlace--activo {
+    background-color: var(--accent-gold);
+    color: #0f0d0e;
+    outline: none;
+}
+
+/* Estilizacion de mi Perfil */
+
+.seccion__titulo {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    margin: 0 0 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--borde-tarjeta);
+}
+
+.perfil__descripcion {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 1.2rem;
     border-left: 3px solid var(--accent-gold);
 }
-.cajita-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
+
+.perfil__descripcion p {
+    margin: 0;
 }
-.cajita-grid__tarjeta{
+
+/* La vista de las tarjetas */
+.cajita-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1rem;
+}
+.cajita-grid__tarjeta {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid var(--borde-tarjeta);
-    border-radius: 20px;
-    padding: 20px;
-    cursor: pointer;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
     transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
-.cajita-grid__titulo{
-    color: var(--orito);
+.cajita-grid__titulo {
+    color: var(--accent-gold);
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin: 0 0 0.6rem;
 }
-.cajita-grid__descripcion{
+.cajita-grid__descripcion {
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.5;
-}
-/* Aplicamos aqui los efectos para enfoque de cada tarjeta*/
-.cajita-grid:hover .cajita-grid__tarjeta {
-    opacity: 0.25;
-    filter: blur(1px);
-}
-.cajita-grid .cajita-grid__tarjeta:hover, .cajita-grid .cajita-grid__tarjeta:focus-within{
-    opacity: 1;
-    filter: blur(0);    
-    transform: translateY(-4px) scale(1.02);
-    border-color: var(--accent-gold);
-    box-shadow: 0 8px 20px rgba(255,176,32,0.3);
+    margin: 0;
 }
 
-.contactame__descripcion{
-    color: var(--text-secondary);
-    margin-bottom: 20px;
+/* Pie de pagina */
+.pie__texto {
+    margin: 0.2rem 0;
 }
-.contactame__formulario{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+ 
+.pie__enlace {
+    color: var(--accent-gold);
 }
-
-
-.contactame__input, .contactame__textarea{
-    width: 100%;
-    background-color: rgba(134, 126, 126, 0.03);
-    border: 1px solid var(--borde-tarjeta);
-    border-radius: 15px;
-    padding: 15px 15px;
-    color: var(--text-primary);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 0.9rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.contactame__input:focus, .contactame__textarea:focus{
-    box-shadow: 0 0 10px rgba(255, 176, 32, 0.2);
-    outline: none;
-    border-color: var(--accent-gold);
+ 
+.pie__enlace:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
 }
 
-.contactame__boton{
-    width: 100%;
-    background-color: var(--accent-gold);
-    color: #0f0d0e;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    align-self: flex-start;
-    transition: transform 0.2 ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-.contactame__boton:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 176, 32, 0.3);
-}
+/* Media Queries R3 2 breakpoints uno para tablets y otro para PCs */
 
-/*Parte requisito responsivo para movil*/
 @media (min-width: 600px) {
     body {
-        padding: 24px;
+        padding: 1.5rem;
     }
-
-    .perfil,
-    .proyectos,
-    .skills,
-    .contactame {
-        padding: 32px;
+ 
+    .cabecera,
+    .menu,
+    .principal > section,
+    .pie {
+        padding: 2rem;
     }
-
-    .perfil__title {
-        font-size: 2.2rem;
+ 
+    .cabecera__titulo {
+        font-size: 2.6rem;
     }
-
-    /* Aquí sí activamos las múltiples columnas para PC */
-    .cajita-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ 
+    .menu__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
+ 
+    .pie {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
 
-    /* El botón vuelve a su tamaño normal alineado */
-    .contactame__boton {
-        width: auto;
+@media (min-width: 1024px) {
+    .portafolio {
+        grid-template-columns: 14rem 1fr;
+        grid-template-areas:
+            "cabecera cabecera"
+            "menu     principal"
+            "pie      pie";
+        align-items: start;
+    }
+ 
+    .menu {
+        position: sticky;
+        top: 1.5rem;
+    }
+ 
+    .menu__lista {
+        flex-direction: column;
     }
 }
