@@ -1,0 +1,170 @@
+:root{
+    --bg-color: #352e31;            /* Fondo oscuro cálido */
+    --tarjeta-bg: #151815;             /* Fondo de tarjetas */
+    --borde-tarjeta: #2a2428;         /* Borde sutil */
+    --accent-gold: #ffb020;
+    --orito: #e9b048;         /* Ámbar / Oro cálido */
+    --text-primary: #f5f0eb;        /* Color del texto principal */
+    --text-secondary: #a0959d;      /* Color del texto secundario */
+    --font-main: system-ui, -apple-system, sans-serif;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 20px;
+}
+.portafolio{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.perfil, .proyectos, .skills ,.contactame{
+    position: sticky;
+    top: 20px;
+    background-color: var(--tarjeta-bg);
+    border: 1px solid var(--borde-tarjeta);
+    padding: 30px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.proyectos__titulo-seccion, .skills__title, .contactame__title{
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--borde-tarjeta);
+}
+.perfil__title{
+    font-size: 2.4rem;
+    color: var(--accent-gold);
+}
+.perfil__certificado{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.perfil__pais{
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+.perfil__descripcion{
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 20px;
+    border-left: 3px solid var(--accent-gold);
+}
+.cajita-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.cajita-grid__tarjeta{
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--borde-tarjeta);
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.cajita-grid__titulo{
+    color: var(--orito);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.cajita-grid__descripcion{
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+/* Aplicamos aqui los efectos para enfoque de cada tarjeta*/
+.cajita-grid:hover .cajita-grid__tarjeta {
+    opacity: 0.25;
+    filter: blur(1px);
+}
+.cajita-grid .cajita-grid__tarjeta:hover, .cajita-grid .cajita-grid__tarjeta:focus-within{
+    opacity: 1;
+    filter: blur(0);    
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--accent-gold);
+    box-shadow: 0 8px 20px rgba(255,176,32,0.3);
+}
+
+.contactame__descripcion{
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+.contactame__formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.contactame__input, .contactame__textarea{
+    width: 100%;
+    background-color: rgba(134, 126, 126, 0.03);
+    border: 1px solid var(--borde-tarjeta);
+    border-radius: 15px;
+    padding: 15px 15px;
+    color: var(--text-primary);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contactame__input:focus, .contactame__textarea:focus{
+    box-shadow: 0 0 10px rgba(255, 176, 32, 0.2);
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.contactame__boton{
+    width: 100%;
+    background-color: var(--accent-gold);
+    color: #0f0d0e;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: transform 0.2 ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contactame__boton:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 176, 32, 0.3);
+}
+
+/*Parte requisito responsivo para movil*/
+@media (min-width: 600px) {
+    body {
+        padding: 24px;
+    }
+
+    .perfil,
+    .proyectos,
+    .skills,
+    .contactame {
+        padding: 32px;
+    }
+
+    .perfil__title {
+        font-size: 2.2rem;
+    }
+
+    /* Aquí sí activamos las múltiples columnas para PC */
+    .cajita-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* El botón vuelve a su tamaño normal alineado */
+    .contactame__boton {
+        width: auto;
+    }
+}
