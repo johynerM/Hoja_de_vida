@@ -100,6 +100,7 @@ img {
     margin: 0 0 1.2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--borde-tarjeta);
+    text-align: center;
 }
 
 .perfil__descripcion {
@@ -124,12 +125,14 @@ img {
     border: 1px solid var(--borde-tarjeta);
     border-radius: 1.2rem;
     padding: 1.2rem;
+    border-left: 3px solid var(--accent-gold);
     transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 .cajita-grid__titulo {
     color: var(--accent-gold);
     font-size: 1.2rem;
     margin: 0 0 0.6rem;
+    text-align: center;
 }
 .cajita-grid__descripcion {
     color: var(--text-secondary);
@@ -137,6 +140,10 @@ img {
     line-height: 1.5;
     margin: 0;
 }
+
+/* Estilizacion de contactame en el index */
+
+
 
 /* Pie de pagina */
 .pie__texto {
@@ -266,6 +273,7 @@ img {
     border: 1px solid var(--borde-tarjeta);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-left: 3px solid var(--accent-gold);
 }
  
 .dato__cara {
@@ -278,14 +286,15 @@ img {
     transform: rotateY(180deg);
 }
  
-.dato__emoji {
-    font-size: 2.5rem;
+.dato__icono {
+    justify-content: right;
+    font-size: 1.5rem;
 }
  
 .dato__titulo {
     margin: 0.3rem 0 0;
     color: var(--accent-gold);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
  
 .dato__pista {
@@ -295,8 +304,9 @@ img {
 }
  
 .dato__texto {
-    margin: 0;
-    font-size: 0.95rem;
+    margin: 0px;
+    padding: 15px;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
