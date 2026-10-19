@@ -2,7 +2,7 @@
  
  <!-- R15 descripcion corta de mi pagina con el enlace de la misma -->
 
-Sitio personal con mi hoja de vida, mis proyectos y algunas cosas que me gustan. Está hecho solo con HTML y CSS (sin JavaScript), con diseño responsive: se ve bien en celular, tablet y computador.
+Sitio personal con mi hoja de vida, mis proyectos y algunas cosas que me gustan. Está hecho solo con HTML y CSS, con diseño responsive: se ve bien en celular, tablet y computador.
 
 enlace de la pagina web: https://johynerm.github.io/Hoja_de_vida/
 
