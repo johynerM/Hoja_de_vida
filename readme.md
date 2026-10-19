@@ -1,14 +1,18 @@
 # Hoja de vida web · Johyner Martinez
  
+ <!-- R15 descripcion corta de mi pagina con el enlace de la misma -->
+
 Sitio personal con mi hoja de vida, mis proyectos y algunas cosas que me gustan. Está hecho solo con HTML y CSS (sin JavaScript), con diseño responsive: se ve bien en celular, tablet y computador.
 
+enlace de la pagina web: https://johynerm.github.io/hoja-de-vida.github.io/
+
 ## CONTENIDO
-- [Paginas](#-páginas)
-- [Mockups](#-mockups)
-- [Breakpoints](#-breakpoints)
-- [Visualización de la página en celular y PC](#-visualizacion-de-la-pagina-en-celular-y-pc)
-- [Como lo publiqué](#-como-lo-pubñique)
-- [Fuentes](#-fuentes)
+- [Páginas](#páginas)
+- [Mockups](#mockups)
+- [Breakpoints](#breakpoints)
+- [Visualización de la página en celular y PC](#visualización-de-la-página-en-celular-y-pc)
+- [Cómo lo publiqué](#cómo-lo-publiqué)
+- [Fuentes consultadas](#fuentes-consultadas)
 
 ## Páginas
  
@@ -22,6 +26,8 @@ Las tres páginas comparten el mismo menú de navegación y un único archivo de
 
 ## Mockups
  
+ <!-- R16 Todos los mockups estan en esta seccion -->
+
 Cada mockup tiene marcadas las áreas del grid (`grid-template-areas`) y explica en qué ancho cambia el diseño.
 
 - Presentare primero los Mockups para las **versiones de celular** ya que esta pagina tiene una orientacion de **MobileFirst**
@@ -63,10 +69,12 @@ Cada mockup tiene marcadas las áreas del grid (`grid-template-areas`) y explica
 
 ## Breakpoints
  
+<!-- R18 explicaciones -->
+
 El diseño es **Mobile First**: el CSS base es para celular y las `@media (min-width: …)` van al final del archivo, de menor a mayor.
  
 - **Base (celular, menos de 600px):** todo en una sola columna. El orden es encabezado, banner, menú, contenido y pie. La foto de perfil va encima del nombre, el menú tiene los enlaces apilados y las tarjetas se muestran de a una.
-- **Desde 600px (tablet):** el encabezado pasa a fila, con la foto a la izquierda del texto. El menú se vuelve horizontal, el banner y el título crecen, hay más espacio interior y el botón del formulario deja de ocupar todo el ancho.
+- **Desde 600px (tablet):** el encabezado pasa a columna, con la foto a la izquierda del texto. El menú se vuelve horizontal, el banner y el título crecen, hay más espacio interior y el botón del formulario deja de ocupar todo el ancho.
 - **Desde 1024px (computador):** el grid pasa a dos columnas (`18rem 1fr`) con estas áreas:
 ```css
   grid-template-areas:
@@ -80,6 +88,8 @@ El diseño es **Mobile First**: el CSS base es para celular y las `@media (min-w
 Además, las tarjetas usan `repeat(auto-fit, minmax(15rem, 1fr))`, así que se acomodan solas según el espacio disponible. El contenido tiene un ancho máximo de `62rem` y está centrado.
 
 ## Visualización de la página en celular y PC
+
+<!-- R17 en celular y en PC -->
 
 Observemos algunos pequeños adelantos de como se visualiza la pagina en los distintos dispositivos
 ```
@@ -119,10 +129,10 @@ Para las pantallas más grandes como los PCs o laptops podemos verlo de la sigui
 
 
 ## Cómo lo publiqué
- 
-<!-- Reescribe estos pasos con tus propias palabras si quieres, pero deja el resumen de lo que hiciste. -->
- 
-1. Creé un repositorio **público** en GitHub llamado `hoja-de-vida`.
+  
+<!-- R19 paso a paso de como se publico -->
+
+1. Creé un repositorio **público** en GitHub llamado `Hoja-de-vida`.
 2. Subí todos los archivos del sitio (`index.html`, `proyectos.html`, `personalidad.html`, `style.css` y las carpetas `img`, `mockups` y `capturas`).
 3. En el repositorio entré a **Settings → Pages**. En **Build and deployment**, en **Source**, elegí **Deploy from a branch**, y luego la rama **main** con la carpeta **/ (root)**. Después pulsé **Save**.
 4. Esperé unos minutos hasta que GitHub construyó el sitio. Pude ver el proceso en la pestaña **Actions** y el enlace final en la página de Pages.
