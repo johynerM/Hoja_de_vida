@@ -2,6 +2,14 @@
  
 Sitio personal con mi hoja de vida, mis proyectos y algunas cosas que me gustan. Está hecho solo con HTML y CSS (sin JavaScript), con diseño responsive: se ve bien en celular, tablet y computador.
 
+## CONTENIDO
+- [Paginas](#-páginas)
+- [Mockups](#-mockups)
+- [Breakpoints](#-breakpoints)
+- [Visualización de la página en celular y PC](#-visualizacion-de-la-pagina-en-celular-y-pc)
+- [Como lo publiqué](#-como-lo-pubñique)
+- [Fuentes](#-fuentes)
+
 ## Páginas
  
 | Página | Archivo | Qué contiene |
@@ -15,6 +23,43 @@ Las tres páginas comparten el mismo menú de navegación y un único archivo de
 ## Mockups
  
 Cada mockup tiene marcadas las áreas del grid (`grid-template-areas`) y explica en qué ancho cambia el diseño.
+
+- Presentare primero los Mockups para las **versiones de celular** ya que esta pagina tiene una orientacion de **MobileFirst**
+
+```
+--->Inicio (la estructura de index.html )
+```
+
+![Mockup index celular](mockups/inicio-celular.png)
+
+```
+--->Mis Proyectos (la estructura de proyectos.html )
+```
+
+![Mockup proyectos celular](mockups/proyectos-celular.png)
+```
+--->Sobre mi (la estructura de personalidad.html )
+```
+
+![Mockup sobre mi celular](mockups/personalidad-celular.png)
+
+- Ahora la parte de los Mockups **en version de PC o laptop**.
+
+```
+--->Inicio (la estructura de index.html )
+```
+
+![Mockup index PC](mockups/inicio-computador.png)
+```
+--->Mis Proyectos (la estructura de proyectos.html )
+```
+
+![Mockup proyectos PC](mockups/proyectos-computador.png)
+```
+--->Sobre mi (la estructura de personalidad.html )
+```
+
+![Mockup personalidad PC](mockups/personalidad-computador.png)
 
 ## Breakpoints
  
@@ -34,6 +79,60 @@ El diseño es **Mobile First**: el CSS base es para celular y las `@media (min-w
  
 Además, las tarjetas usan `repeat(auto-fit, minmax(15rem, 1fr))`, así que se acomodan solas según el espacio disponible. El contenido tiene un ancho máximo de `62rem` y está centrado.
 
+## Visualización de la página en celular y PC
+
+Observemos algunos pequeños adelantos de como se visualiza la pagina en los distintos dispositivos
+```
+En móviles tenemos los diferentes apartados de la siguiente manera:
+```
+### **Inicio**
+
+![Visualizacion del inicio-1 en Celular](capturas/Cel-inicio-1.jpeg)
+![Visualizacion del inicio-2 en Celular](capturas/Cel-inicio-2.jpeg)
+
+### **Mis Proyectos**
+
+![Visualizacion de proyectos-1 en Celular](capturas/Cel-proyectos-1.jpeg)
+![Visualizacion de proyectos-2 en Celular](capturas/Cel-proyectos-2.jpeg)
+
+### **Sobre Mi**
+
+![Visualizacion de personalidad-1 en Celular](capturas/Cel-personalidad-1.jpeg)
+![Visualizacion de personalidad-2 en Celular](capturas/Cel-personalidad-2.jpeg)
+```
+Para las pantallas más grandes como los PCs o laptops podemos verlo de la siguiente manera
+```
+### **Inicio**
+
+![Visualizacion del inicio-1 en PC](capturas/PC-inicio-1.jpeg)
+![Visualizacion del inicio-2 en PC](capturas/PC-inicio-2.jpeg)
+
+### **Mis Proyectos**
+
+![Visualizacion de proyectos-1 en PC](capturas/PC-proyectos-1.jpeg)
+![Visualizacion de proyectos-2 en PC](capturas/PC-proyectos-2.jpeg)
+
+### **Sobre Mi**
+
+![Visualizacion de personalidad-1 en PC](capturas/PC-personalidad-1.jpeg)
+![Visualizacion de personalidad-2 en PC](capturas/PC-personalidad-2.jpeg.png)
+
+
+## Cómo lo publiqué
+ 
+<!-- Reescribe estos pasos con tus propias palabras si quieres, pero deja el resumen de lo que hiciste. -->
+ 
+1. Creé un repositorio **público** en GitHub llamado `hoja-de-vida`.
+2. Subí todos los archivos del sitio (`index.html`, `proyectos.html`, `personalidad.html`, `style.css` y las carpetas `img`, `mockups` y `capturas`).
+3. En el repositorio entré a **Settings → Pages**. En **Build and deployment**, en **Source**, elegí **Deploy from a branch**, y luego la rama **main** con la carpeta **/ (root)**. Después pulsé **Save**.
+4. Esperé unos minutos hasta que GitHub construyó el sitio. Pude ver el proceso en la pestaña **Actions** y el enlace final en la página de Pages.
+5. Abrí el enlace en una ventana de incógnito y desde mi celular para comprobar que las páginas, los enlaces y las imágenes funcionan.
+La página principal tiene que llamarse exactamente `index.html` porque es el archivo que GitHub Pages abre por defecto cuando alguien entra al enlace del sitio.
+
 ## Fuentes consultadas
  
 - Documentación oficial de GitHub: [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
+- Video tutorial de youtube: [🟢Cómo PUBLICAR un Sitio Web GRATIS con GitHub Pages](https://youtu.be/-qU9OqSnJxY?si=Qdn8mormOZjq4L2k)
+
+- Claude (asistente de IA de Anthropic): lo usé para revisar mi código contra la rúbrica, corregir errores de HTML y de grid y entender los pasos para publicar en GitHub Pages.
